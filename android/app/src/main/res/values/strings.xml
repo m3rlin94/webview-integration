@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android</string>
+    <string name="full_url_https">Full URL (https://...)</string>
+    <string name="default_url">https://exhibitors-dev.roziesynopsis.com/e/DTM2025/u/201183</string>
+    <string name="exhibitors_webview_demo">Exhibitors WebView Demo</string>
+    <string name="open_webview">Open WebView</string>
+</resources>

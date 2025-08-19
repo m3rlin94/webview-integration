@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_marginTop="48dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exhibitors_webview_demo"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:paddingBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Enter URL"
+        android:hint="@string/full_url_https"
+        android:inputType="textUri"
+        android:minHeight="48dp"
+        android:text="@string/default_url" />
+
+    <Button
+        android:id="@+id/btnXml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_webview"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
