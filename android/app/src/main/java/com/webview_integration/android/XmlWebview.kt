@@ -37,14 +37,12 @@ class XmlWebview : AppCompatActivity() {
     }
 
     private lateinit var webView: WebView
-    // Progress bar & pull-to-refresh removed – simple full-screen WebView now
 
     private lateinit var permissionLauncher: ActivityResultLauncher<Array<String>>
     private var pendingPermissionRequest: PermissionRequest? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Create the WebView programmatically; no XML layout required
         webView = WebView(this).apply {
             layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -119,8 +117,6 @@ class XmlWebview : AppCompatActivity() {
         }
 
         webView.webChromeClient = object : WebChromeClient() {
-            // onProgressChanged removed – no progress UI
-
             override fun onPermissionRequest(request: PermissionRequest?) {
                 if (request == null) return
                 val wants = mutableListOf<String>()
@@ -141,8 +137,6 @@ class XmlWebview : AppCompatActivity() {
             }
         }
 
-        // Pull-to-refresh removed
-
         if (savedInstanceState == null) {
             val url = intent.getStringExtra(EXTRA_URL) ?: "https://exhibitors-dev.roziesynopsis.com"
             webView.loadUrl(url)
@@ -162,5 +156,4 @@ class XmlWebview : AppCompatActivity() {
         })
     }
 
-    // buildExhibitorUrl removed as URL is now passed directly via Intent
 }
