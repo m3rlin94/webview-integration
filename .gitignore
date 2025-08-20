@@ -13,3 +13,30 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# --- iOS / Xcode ---
+# Xcode user data (do not commit editor state)
+ios/**/xcuserdata/
+*.xcuserstate
+
+# Derived data and build artifacts
+DerivedData/
+ios/**/build/
+
+# Swift Package Manager (local build products)
+.build/
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
+
+# CocoaPods (if used)
+Pods/
+
+# Symbols and archives
+*.dSYM
+*.dSYM.zip
+*.ipa
+
+# Fastlane outputs (if used)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
